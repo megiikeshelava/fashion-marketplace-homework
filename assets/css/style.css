@@ -66,6 +66,10 @@
     justify-content: center;
 }
 
+.c-direction{
+    flex-direction: column;
+}
+
 .t-align{
     text-align: center;
 }
@@ -121,12 +125,19 @@
     gap: 20px;
 }
 
+.gap-40{
+    gap: 40px;
+}
+
 
 
 
 /*utility classes end*/
+
+/* general sections and styles */
+
 body {
-    background: linear-gradient(to right, #984D38, #181E41);
+    background: linear-gradient(90deg, #984D38, #181E41);
     width: 100%;
 }
 
@@ -176,7 +187,6 @@ header {
 
     nav {
         ul {
-            gap: 40px;
 
             li {
                 color: var(--basic);
@@ -210,7 +220,7 @@ header {
                     height: auto;
                     margin-top: 10px;
 
-                    .line {
+                    .line{
                         border: 0.5px solid rgba(255, 255, 255, 0.2);
                         margin-block: 10px;
                     }
@@ -273,55 +283,71 @@ header {
 }
 
 
+/* describing cards start*/
+
+
 .card {
     max-width: 388px;
     border-radius: var(--primary-radius);
     background-color: var(--basic-10);
     border: 26px solid transparent;
-                
+
     img {
         max-width: 337px;
         margin-bottom: 20px;
-                
+
     }
-                
+
     .wrapper {
         h3 {
             font-size: var(--base);
-            color: var(--basic-50);       
+            color: var(--basic-50);
         }
-                
+
         h4 {
             font-size: var(--base);
             padding-top: 10px;
             padding-bottom: 24px;
         }
-                
+
         p {
             font-size: var(--base);
             color: var(--basic-50);
         }
-                
+
         span {
             font-size: 15px;
         }
-                
+
     }
-                
+
     .card-footer {
         gap: 20px;
+
         svg {
             padding-top: 6px;
+
+            path {
+                transition: fill 0.4s;
+            }
+
+            &:hover {
+                path {
+                    fill: red;
+                }
+            }
         }
-                
+
         a {
             padding: 10px 101px;
             background: linear-gradient(to bottom, #B75CFF, #671AE4);
             font-size: var(--base);
         }
-                
+
     }
 }
+
+
 
 .wrapper-card{
         .second-card{
@@ -330,7 +356,6 @@ header {
             max-width: 388px;
             border-radius: var(--primary-radius);
             background-color: var(--basic-10);
-            text-align: center;
             position: relative;
             padding-bottom: 42px;
             
@@ -350,6 +375,10 @@ header {
                     height: 99px;
                     padding-top:216px;
                     padding-inline: 145px;
+                    
+                    &:hover {
+                        transform: scale(1.1);
+                    }
                     
                 }
             }
@@ -374,11 +403,33 @@ header {
                 background: linear-gradient(to bottom, #B75CFF, #671AE4);
             }
         }
+}
+
+
+/* describing cards end*/
+
+
+section {
+    h1, h2, h3 {
+        font-size: var(--heading-2);
+        transition: color 0.3s ease;
+        
+        &:hover {
+        color: #B75CFF;
+        }
     }
 
+    p{
+        font-size: var(--base);
+        padding-block: 10px 30px;
+        color: var(--basic-50);
+    }
+
+}
 
 
 
+/* describing INDEX HTML start*/
 
 
 main.home-page {
@@ -422,19 +473,6 @@ main.home-page {
 
 
 }
-section{
-    text-align: center;
-
-    h2{
-        font-size: var(--heading-2);
-    }
-    p{
-        font-size: var(--base);
-        padding-top: 10px;
-        padding-bottom: 30px;
-    }
-    
-}
 
 section.hero {
     margin-top: 140px;
@@ -445,14 +483,11 @@ section.hero {
         h1 {
             font-weight: 800;
             font-size: var(--heading-1);
-            color: var(--basic);
         }
 
         p {
-            font-size: var(--base);
-            color: var(--basic-50);
-            margin-top: 15px;
-            margin-bottom: 35px;
+            margin-block: 15px 35px;
+            max-width: 490px;
         }
 
         .buttons {
@@ -498,9 +533,16 @@ section.hero {
 
     article.preview {
         max-width: 600px;
+        img{
+            transition: transform 0.3s ease;
+             
+            &:hover {
+            transform: scale(1.1);
+            }
+
+        }
 
         .image-wrapper {
-            flex-direction: column;
             
             align-self: flex-start;
 
@@ -514,9 +556,6 @@ section.hero {
                 border-radius: var(--primary-radius);
                 padding-inline: 20px;
 
-                img {
-                    /* filter: drop-shadow(0px 10px 13px #000000); */
-                }
             }
 
             #bg-clothes {
@@ -531,54 +570,39 @@ section.hero {
         }
 
     }
+
 }
 
 .brands-wrapper {
-
-    width: 100%;
+    
     max-width: 995px;
-    margin-top: 115px;
-    margin-bottom: 105px;
-
-    /*
-    img.brands-adidas{
-        width: 143px;
-        height: 103px; 
-        
+    margin-block: 115px 105px;
+    gap: 250px;
+    margin-left: 100px;
+    svg{
+        display: inline-block;
+        &:hover {
+            animation: shake 0.5s;
+        }
     }
-    img.brands-puma{
-        width: 143px;
-        height: 91px; 
-
-    }
-    img.brands-lacoste{
-        width: 143px;
-        height: 91px; 
-
-    } */
-
 }
 
 section.about {
+
     article.about-us {
-        text-align: center;
 
         h2 {
-            font-size: var(--heading-2);
-            color: var(--basic);
-            padding-bottom: 10px;
+            padding-bottom: 10px; 
         }
 
         p {
-            font-size: var(--base);
             color: var(--gray-8);
-
         }
     }
 
     article.about-wrapper {
-        margin-top: 90px;
-        margin-bottom: 120px;
+
+        margin-block: 90px 120px;
         gap: 90px;
 
         img {
@@ -594,21 +618,13 @@ section.about {
 
             h3 {
                 font-size: var(--heading-3);
-                color: var(--basic);
-
-
             }
 
             p {
-                font-size: var(--base);
-                color: var(--gray-50);
-                padding-top: 20px;
-                padding-bottom: 50px;
-
+                padding-block: 20px 50px;
             }
 
             a {
-                text-align: center;
                 border-radius: var(--primary-radius);
                 height: auto;
                 width: auto;
@@ -622,19 +638,9 @@ section.about {
 
 section.collection {
 
-    text-align: center;
-
-    h2 {
-        font-size: var(--heading-2);
-        color: var(--basic);
-    }
-
     >p {
         line-height: 38px;
-        font-size: var(--base);
-        color: var(--basic-50);
-        padding-top: 10px;
-        padding-bottom: 63px;
+        padding-block: 10px 63px;
     }
 
     article.section-header {
@@ -649,7 +655,6 @@ section.collection {
 
             p {
                 line-height: 38px;
-                font-size: var(--base);
                 color: var(--basic);
             }
         }
@@ -657,10 +662,9 @@ section.collection {
     }
 
     article.collection-cards {
-        margin-top: 157px;
 
         .buttons {
-            
+            margin-top: 157px;
             width: 100%;
 
             a.btn {
@@ -681,22 +685,21 @@ section.collection {
     } 
 }
 
-section.trending, section.creators, section.upcoming-brands {
-    
+section.trending, section.creators, section.brands {
     margin-top: 150px;
-
 }
+
 section.faq{
     margin-top: 120px;
 
     .faq-wrapper{
-        max-width: 591px;
         width: 100%;
         height: auto;
 
         ul.faq-list{
-            flex-direction: column;
             align-items: flex-start;
+            max-width: 591px;
+            width: 100%;
             
             li.asked-questions{
                 width: 100%;
@@ -724,6 +727,11 @@ section.faq{
                     }
                 }
 
+            }  
+            
+            .line{
+                border: 1px solid var(--basic-10);
+                width: 100%;
             }
           
         }
@@ -732,31 +740,69 @@ section.faq{
 }
 
 
+section.get-started{
+    margin-block: 150px 130px;
+    background: linear-gradient(to bottom, #B75CFF, #671AE4);
+    width: 100%;
+    border-radius: var(--primary-radius);
+    transition: background 0.3s ease;
+            &:hover{
+                background: rgba(0, 0, 0, 0.3);
+            }
 
+    .content{
+        width: 100%;
+        padding-block: 50px;
 
+        h2{
+            font-size:50px;
+            max-width: 397px;
+        }
+    
+        a{
+            background-color: var(--basic-50);
+            padding: 10px 20px;
+            font-size: var(--base);
+        }
+    }
 
+}
 
+footer{
+    .wrapper{
+        margin-bottom: 40px;
 
+        p.logo{
+            color: var(--purple-100);
+            font-size: var(--base);
+        }
+        p{
+          color:var(--basic-50);
+          font-size: 15px;  
+          line-height: 25px;
+        }
 
+        ul{
+            li{
+                &:not(:first-of-type), a {
+                    color:var(--basic-50);
+                    font-size: 15px;  
+                }
 
+                &:first-of-type {
+                    font-size: var(--base);  
+                }
 
+        
+            }
+        }
 
+    }
+}
 
+/* describing INDEX HTML end*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* describing MARKET HTML start*/
 
 
 
@@ -800,7 +846,80 @@ main.creators-market {
 
     }
 
+    section.hero{
+        h1{
+            font-weight: 800;
+            font-size: var(--heading-1);
+            max-width: 508px;
+            margin: 0 auto;
+        }
+        p{
+            max-width: 617px;
+            margin: 0 auto;
+        }
+        a.btn{
+            padding: 10px 20px;
+            background: linear-gradient(to bottom, #B75CFF, #671AE4);
+            font-size: var(--base);
+        }
+    }
+
+    section.collection{
+        margin-top: 150px;
+
+    }
+
+    section.creators {
+        flex-direction: column;
+        gap: 50px;
+
+        article.content-wrapper{
+            .content{
+                p{
+                    max-width: 783px;
+                }
+            }
+
+            button{
+                background-color: transparent;
+                border: 0.5px solid var(--basic);
+                border-radius: 4px;
+                max-width: 128px;
+                padding: 16px 8.5px;
+                gap:10px;
+                span{
+                    font-size: var(--base);
+                }
+
+                img{
+                    width: 17px;
+                    height: 10px;
+                }
+            }
+
+        }
+    }
+
+    section.brands {
+        flex-direction: column;
+        gap: 50px;
+        .content{
+
+            p {
+                max-width: 783px;
+            }
+        }
+    }
+
+   
+
+
 }
+
+/* describing MARKET HTML END*/
+
+
+
 
 
 
