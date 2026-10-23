@@ -122,6 +122,9 @@
     line-height: 200%;
 }
 
+.gap-10{
+    gap: 10px;
+}
 .gap-15{
     gap:15px;
 }
@@ -176,7 +179,6 @@ header {
             border-radius: 50%;
             padding: 15px 15px;
 
-            img {}
         }
 
         input {
@@ -1365,6 +1367,193 @@ main.stats-page{
         }
     }
     
+}
+
+main.community{
+    gap: 80px;
+    
+    .community-container{
+        max-width: 1015px;
+        margin-block: 60px 120px;
+        margin-left: 120px;
+
+        h1{
+            font-size: var(--heading-2);
+        }
+
+        p{
+            color: var(--basic);
+            font-size: 16px;
+        }
+
+        section.news{
+            margin-bottom: 60px;
+            margin-left: 170px;
+
+            .author-wrapper{
+                gap: 13px;
+                margin-bottom: 25px;
+
+                h2{
+                    font-size: var(--base);
+                }
+                span{
+                    font-size: 16px;
+                    color: var(--basic-50);
+                }
+            }
+
+            img{
+                margin-block: 16px 25px;
+            }
+
+            .react-wrapper{
+                max-width: 772px;
+                margin-bottom: 20px;
+            }
+            form.comment{
+                max-width: 772px;
+                position: relative;
+               
+                >svg{
+                    position: absolute;
+                    top: 4px;
+                    left: 4px;
+                    z-index:2;
+                }
+                >input{
+                    width: 100%;
+                    background-color: rgba(70, 75, 103, 1);
+                    border: 0;
+                    border-radius: 150px;
+                    padding-block: 10px;
+                    padding-left: 50px;
+
+                    &::placeholder {
+                        color: var(--basic);
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    aside{
+        margin-top: 60px;
+        span{
+            color: var(--basic-50);
+        } 
+            
+        .aside-container{
+            max-width: 360px;
+
+            form.search{
+                width: 100%;
+                position: relative;
+                margin-bottom: 15px;
+    
+                >svg{
+                        position: absolute;
+                        top: 14px;
+                        left: 24px;
+                        z-index:2;
+                    }
+
+                >input{
+                    width: 100%;
+                    background-color: transparent;
+                    border: 0.5px solid var(--basic-50);
+                    border-radius: 184px;
+                    padding-block: 16px;
+                    padding-left: 60px;
+                    
+
+                    &::placeholder {
+                        color: var(--basic);
+                    }
+                }
+            }
+            .suggestion{
+                padding: 20px 20px 10px 20px;
+                background-color: var(--basic-10);
+                border-radius: 4px;
+
+
+                >p{
+                    font-size: 20px;
+                    margin-bottom: 44px;
+                }
+
+                .author-wrapper{
+                    margin-bottom: 34px;
+
+                    div{
+                        margin-inline: 12px 72px;
+
+                        h2{
+                            font-size: 17px;
+                        }
+                        span{
+                            font-size: 14px;
+
+                        }
+                    }
+                    a.btn{
+                        background-color: var(--purple-100);
+                        padding: 6px 26px;
+                    }
+                }
+
+                a.more{
+                    color: var(--purple-100);
+                    font-size: 16px;
+                }
+
+                .brand-wrapper{
+                    margin-bottom: 25px;
+
+                   h3{
+                    font-size: 14px;
+                    margin-inline: 12px 54px;
+                   }
+                   span{
+                    font-size: 12px;
+                   } 
+                   a.btn{
+                    margin-left: 10px;
+                    background: var(--bg-linear-prpl);
+                    font-size: 16px;
+                    padding: 5px 30px;
+                    border-radius: 4.45px;
+                   }
+                }
+                .trending-wrapper{
+                    background-color: var(--basic-10);
+                    box-shadow: rgba(0, 0, 0, 0.15);
+                    padding: 4px 4px 0 4px;
+                    margin-bottom: 12px;
+                    
+                    span{
+                        font-size: 10px;
+                    }
+                    div{
+                        h2{
+                            font-size: 14px;
+                        }
+                    }
+                }
+
+                .chat-wrapper{
+                    .wrapper{
+                        div{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 
