@@ -232,7 +232,7 @@ header {
                     width: 190px;
                     height: auto;
                     margin-top: 10px;
-                    z-index: 3;
+                    z-index: 10;
 
                     .line{
                         border: 0.5px solid rgba(255, 255, 255, 0.2);
@@ -1584,6 +1584,118 @@ main.community{
             }
         }
     }
+}
+
+
+main.creator-studio{
+    
+    section.hero{
+        margin-top: 130px;
+        gap: 220px;
+
+        h2{
+            font-size: 60px;
+        }
+    
+        p{
+            margin-block: 20px 45px;
+        }
+        article{
+            .content{
+                max-width: 620px;
+    
+                a.btn{
+                    padding: 10px 20px;
+                    background: var(--bg-linear-prpl);
+                    font-size: var(--base);
+                }
+            }
+
+            .preview{
+                position: relative;
+                width: 374px;
+                height: 447px;
+    
+                
+                img{
+                    position: absolute;
+                    transition-duration: 0.3s;
+                    display: block;
+                    top: 0;
+                    left: 0;
+    
+                    &.card-1{
+                        z-index: 3;
+                        top: 0;
+                        left:0;
+                        transition: 0.3s;
+    
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    &.card-2{
+                        z-index: 2;
+                        top: 25px;
+                        left: 25px;
+                    }
+    
+                    &.card-3{
+                        z-index: 1;
+                        top: 50px;
+                        left: 50px;  
+    
+                        
+                    }
+                }
+            }
+
+        }
+
+    }
+
+    section.brands-market{
+        margin-top: 200px;
+
+        article.content{
+            h2{
+                margin-bottom: 20px;
+                font-size: 40px;
+            }
+            p{
+                max-width: 441px;
+                margin: 0 auto;
+            }            
+        }
+        article.brand-cards{
+            gap:50px;
+        }
+        footer.wrapper{
+            margin-bottom: 66px;
+            a{
+                padding-block: 36px ;
+                font-size: 26px;
+                margin-block: 190px 130px;
+
+
+                &:nth-of-type(1){
+                    padding-inline: 98px;
+                    background: var(--bg-linear-prpl);
+                }
+                &:nth-of-type(2){
+                    padding-inline: 73px;
+                    background-color: var(--purple-100);
+                }
+            }
+
+            hr{
+                max-width: 90%;
+                border: 1px solid var(--basic-20);
+            }
+        }
+    }
+
 }
 
 
